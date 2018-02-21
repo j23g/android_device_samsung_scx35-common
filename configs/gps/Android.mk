@@ -1,3 +1,4 @@
+#
 # Copyright (C) 2017 The Lineage Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,16 +12,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-LOCAL_PATH := device/samsung/scx35-common
+LOCAL_PATH := $(my-dir)
 
-# Inherit from AOSP product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+include $(CLEAR_VARS)
+LOCAL_MODULE := gps.conf
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
 
-# Inherit from sprd-common device configuration
-$(call inherit-product, device/samsung/sprd-common/common.mk)
-
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-# Include package config fragments
-include $(LOCAL_PATH)/product/*.mk
+include $(CLEAR_VARS)
+LOCAL_MODULE := gps.xml
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)

@@ -1,5 +1,6 @@
 # Packages
 PRODUCT_PACKAGES += \
 	SamsungDoze \
-	Gello \
-	Snap
+	Snap \
+	camera.sc8830 \
+	Gello
