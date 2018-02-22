@@ -1,4 +1,4 @@
-# NVRAM file for SCX30G_V2 BCM43438 A1 18/05/2015
+# NVRAM file for SM-G361H Rev 0.1 BCM43438 A1 2015/04/23
 # 2.4 GHz, 20 MHz BW mode
 
 # The following parameter values are just placeholders, need to be updated.
@@ -22,22 +22,23 @@ ccode=GB
 pa0itssit=0x20
 extpagain2g=0
 
-#Revision 0.2 PA parameters for 2.4GHz, measured at Antenna Port 01/05/2015
-pa2ga0=0xFF3C,0x16A8,0xFD4C
+#Revision 0.1 PA parameters for 2.4GHz, measured at Antenna Port
+pa2ga0=0xFF75,0x1947,0xFD40
+
 
 AvVmid_c0=0x0,0xc8
-cckpwroffset0=-4
+cckpwroffset0=5
 
-# PPR params  (11b=18dBm, 11g=15/15/17/17/17/17/17, 11n=15/15/17/17/17/17/17/17) 
+# PPR params
 maxp2ga0=78
 txpwrbckof=6
-cckbw202gpo=2
+cckbw202gpo=0
 legofdmbw202gpo=0x66222222
-mcsbw202gpo=0x66622222
+mcsbw202gpo=0x88444444
 propbw202gpo=0xdd
 
 # OFDM IIR :
-ofdmdigfilttype=18
+ofdmdigfilttype=17
 ofdmdigfilttypebe=18
 
 # PAPD mode:
@@ -60,6 +61,10 @@ muxenab=0x10
 #VCO freq 326.4MHz
 spurconfig=0x3 
 
-edonthd20l = -66
-edoffthd20ul = -72
+#edonthd20l = -65
+#edoffthd20ul = -71
 
+btc_params95=8
+
+txpwroffset2g=0,0,0,0,0,0,0,0,0,0,0,0,0
+rssicornorm=-2
