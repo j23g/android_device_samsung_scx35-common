@@ -43,10 +43,6 @@
 #define CPUFREQ_SYSFS_PATH  CPU_SYSFS_PATH "/cpufreq/"
 
 #define SCALING_GOVERNOR_PATH   CPU_SYSFS_PATH "/cpu0/cpufreq/scaling_governor"
-<<<<<<< HEAD
-=======
-#define CPU_MAX_FREQ_PATH       CPU_SYSFS_PATH "/cpu0/cpufreq/cpuinfo_max_freq"
->>>>>>> d7fee2aabc05fcd4aee5d9a5b0d65d4cfdc1aa7b
 #define SCALING_MAX_FREQ_PATH   CPU_SYSFS_PATH "/cpu0/cpufreq/scaling_max_freq"
 #define SCALING_MIN_FREQ_PATH   CPU_SYSFS_PATH "/cpu0/cpufreq/scaling_min_freq"
 #define PANEL_BRIGHTNESS "/sys/class/backlight/panel/brightness"
@@ -346,11 +342,7 @@ static void init_cpufreqs(struct samsung_power_module *samsung_pwr) {
 	sysfs_read(SCALING_MIN_FREQ_PATH, samsung_pwr->cpu_min_freq,
 		   sizeof(samsung_pwr->cpu_min_freq));
 	cpu_interactive_read(HISPEED_FREQ_PATH,  samsung_pwr->cpu_hispeed_freq);
-<<<<<<< HEAD
 	sysfs_read(SCALING_MAX_FREQ_PATH, samsung_pwr->cpu_max_freq,
-=======
-	sysfs_read(CPU_MAX_FREQ_PATH, samsung_pwr->cpu_max_freq,
->>>>>>> d7fee2aabc05fcd4aee5d9a5b0d65d4cfdc1aa7b
 		   sizeof(samsung_pwr->cpu_max_freq));
 	ALOGV("%s: CPU min freq: %s\n", __func__, samsung_pwr->cpu_min_freq);
 	ALOGV("%s: CPU hispeed freq: %s\n", __func__, samsung_pwr->cpu_hispeed_freq);
